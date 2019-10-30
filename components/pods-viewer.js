@@ -39,12 +39,13 @@ export default ({ pods }) => {
             <CarouselItem className="vh-100"
                 onExiting={() => setAnimating(true)}
                 onExited={() => setAnimating(false)}
-                key={item.src}
+                key={item.key}
             >
+                {item.key}
                 <img className="d-block w-100" src={item.src} alt={item.altText} />
-                <div className="carousel-caption d-xs-block">
-                    <h5>{item.header}</h5>
-                    <p style={{maxHeight: '50vh'}}>{item.text}</p>
+                <div className="carousel-caption">
+                    <h5 className="d-xs-block">{item.header}</h5>
+                    <p className="d-none d-lg-block" style={{maxHeight: '50vh'}}>{item.text}</p>
                 </div>
             </CarouselItem>
         );

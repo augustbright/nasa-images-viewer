@@ -25,7 +25,7 @@ Index.getInitialProps = async () => {
         dates.push(dateFormatted);
     }
     const podSrcs = dates.map(
-        dateFormatted => `https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=${dateFormatted}`
+        dateFormatted => `https://api.nasa.gov/planetary/apod?api_key=Ih0sK6ILy2N97SaPj1YGsr9caeQH4P0c0IN4lDJ3&date=${dateFormatted}`
     );
     const podPromises = podSrcs.map(podSrc => fetch(podSrc));
     const collectionResponse = await fetch(`https://images-api.nasa.gov/search?q=''&media_type=image`);
