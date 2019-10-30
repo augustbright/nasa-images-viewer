@@ -4,6 +4,7 @@ import PODsViewer from '../components/pods-viewer';
 import fetch from 'isomorphic-unfetch';
 import { Row, Col } from 'reactstrap';
 
+const POD_DAYS = 7;
 
 const Index = ({ collection, pods }) => (
     <Layout>
@@ -18,7 +19,7 @@ const Index = ({ collection, pods }) => (
 
 Index.getInitialProps = async () => {
     const dates = [];
-    for (let i = 0; i < 7; i++) {
+    for (let i = 0; i < POD_DAYS; i++) {
         let msThen = Date.now() - i * 1000 * 60 * 60 * 24;
         let dateThen = new Date(msThen);
         let dateFormatted = `${dateThen.getFullYear()}-${dateThen.getMonth() + 1}-${dateThen.getDate()}`;

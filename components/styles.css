@@ -1,0 +1,9 @@
+.carousel-img-transition-top {
+    position: relative;
+    top: 0px;
+    transition: top 10s linear;
+}
+
+.carousel-item.active .carousel-img-transition-top {
+    top: -100px;
+}

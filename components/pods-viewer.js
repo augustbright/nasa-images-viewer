@@ -1,3 +1,4 @@
+import './styles.css';
 import React, { useState } from 'react';
 import {
     Carousel,
@@ -42,10 +43,14 @@ export default ({ pods }) => {
                 key={item.key}
             >
                 {item.key}
-                <img className="d-block w-100" src={item.src} alt={item.altText} />
+                <div style={{ height: '70vh', overflow: 'hidden' }} className="w-100 d-flex justify-content-center">
+                    <div>
+                        <img className="d-block carousel-img-transition-top" src={item.src} alt={item.altText} />
+                    </div>
+                </div>
                 <div className="carousel-caption">
                     <h5 className="d-xs-block">{item.header}</h5>
-                    <p className="d-none d-lg-block" style={{maxHeight: '50vh'}}>{item.text}</p>
+                    <p className="d-none d-lg-block" style={{ maxHeight: '50vh' }}>{item.text}</p>
                 </div>
             </CarouselItem>
         );
