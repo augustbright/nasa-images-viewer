@@ -36,7 +36,7 @@ export default ({ pods }) => {
 
     const slides = items.map((item) => {
         return (
-            <CarouselItem className="vh-100"
+            <CarouselItem
                 onExiting={() => setAnimating(true)}
                 onExited={() => setAnimating(false)}
                 key={item.key}
